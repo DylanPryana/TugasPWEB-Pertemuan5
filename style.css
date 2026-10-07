@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #eef2f7;
+  color: #1e293b;
+}
+
+/* navbar */
+.navbar {
+  background: #1e3a6e;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 48px;
+}
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+.logo i {
+  margin-right: 10px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+.menu a:hover {
+  text-decoration: underline;
+}
+.ikon-user {
+  font-size: 40px;
+}
+
+/* layout */
+.container {
+  display: flex;
+  gap: 32px;
+  padding: 36px 40px;
+  align-items: flex-start;
+}
+.kartu {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 36px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.form-kartu {
+  width: 33%;
+  min-width: 300px;
+}
+.tabel-kartu {
+  flex: 1;
+  min-width: 0;
+}
+h2 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+/* form */
+label {
+  display: block;
+  font-weight: 600;
+  margin: 18px 0 8px;
+  font-size: 17px;
+}
+input,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #dbe1ea;
+  border-radius: 8px;
+  font-size: 17px;
+  background: #fff;
+}
+input:focus,
+select:focus {
+  outline: 2px solid #3b6fe0;
+  border-color: transparent;
+}
+.tombol-form {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+}
+.btn {
+  border: none;
+  color: #fff;
+  padding: 15px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-simpan {
+  background: #2f5fe3;
+}
+.btn-batal {
+  background: #6b7a90;
+}
+.btn-reset {
+  background: #ef2b3d;
+}
+.btn:hover {
+  opacity: 0.88;
+}
+
+/* tabel */
+.atas-tabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.atas-tabel h2 {
+  margin: 0;
+}
+.kotak-cari {
+  position: relative;
+  width: 300px;
+}
+.kotak-cari input {
+  padding-right: 44px;
+}
+.kotak-cari i {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #475569;
+}
+.bungkus-tabel {
+  border: 1px solid #e5e9f0;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 17px;
+}
+thead {
+  background: #3563e3;
+  color: #fff;
+}
+th,
+td {
+  padding: 18px 16px;
+  text-align: left;
+}
+tbody tr {
+  border-bottom: 1px solid #e5e9f0;
+}
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+tbody tr:last-child {
+  border-bottom: none;
+}
+.tengah {
+  text-align: center;
+}
+.aksi {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.aksi button {
+  width: 46px;
+  height: 42px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btn-edit {
+  background: #2f6bea;
+}
+.btn-hapus {
+  background: #ef2b3d;
+}
+.kosong {
+  text-align: center;
+  color: #64748b;
+  padding: 30px;
+}
+
+/* paginasi */
+.bawah-tabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #64748b;
+}
+.paginasi {
+  display: flex;
+  gap: 8px;
+}
+.paginasi button {
+  min-width: 48px;
+  height: 48px;
+  border: 1px solid #e0e5ee;
+  background: #fff;
+  border-radius: 6px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.paginasi button.aktif {
+  background: #2f6bea;
+  color: #fff;
+  border-color: #2f6bea;
+  font-weight: 700;
+}
+.paginasi button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .form-kartu {
+    width: 100%;
+  }
+  .navbar {
+    padding: 16px 20px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .menu {
+    gap: 14px;
+  }
+  .atas-tabel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .kotak-cari {
+    width: 100%;
+  }
+}
